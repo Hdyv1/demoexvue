@@ -1,9 +1,14 @@
 <template>
-    
+    <Welcome
+        v-if="isLoad"
+        
+    />
 
 </template>
 <script>
-import HomePage from './pages/HomePage.vue';
+import Welcome from './pages/Welcome.vue';
+
+// import HomePage from './pages/HomePage.vue';
 
 export default {
     name: 'App',
@@ -87,7 +92,8 @@ export default {
         },
     },
     components: {
-        HomePage,
+        // HomePage,
+        Welcome,
     },
     mounted() {
         if (localStorage.getItem('token')) {
